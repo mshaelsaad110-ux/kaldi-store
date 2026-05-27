@@ -205,7 +205,7 @@ footer{background:var(--brown);color:#fff;text-align:center;padding:28px;font-si
         <p>حلاوة، بندق، سكريات بنية — محصول مغسول من ارتفاع 1600م | سلالة كاتوي</p>
         <div class="product-footer">
           <div class="price">75 <span>ريال</span></div>
-          <button class="add-btn" onclick="addToCart('كيس رودولفو - كوستاريكا')">أضف للسلة</button>
+          <button class="add-btn" onclick="addToCart('كيس رودولفو - كوستاريكا', 75)">أضف للسلة</button>
         </div>
       </div>
     </div>
@@ -220,14 +220,14 @@ footer{background:var(--brown);color:#fff;text-align:center;padding:28px;font-si
         <p>فواكه حجرية، زهور، شوكولاتة — محصول مجفف من ارتفاع 2200م | سلالة هيريلييوم</p>
         <div class="product-footer">
           <div class="price">80 <span>ريال</span></div>
-          <button class="add-btn" onclick="addToCart('كيس بيبرقاتشيفي - إثيوبيا')">أضف للسلة</button>
+          <button class="add-btn" onclick="addToCart('كيس بيبرقاتشيفي - إثيوبيا', 80)">أضف للسلة</button>
         </div>
       </div>
     </div>
 
     <div class="product-card">
       <div class="product-img">
-        <img src="https://drive.google.com/thumbnail?id=1epInIQR3oc2nqfywdnoQi5eYPH4OqPyW&sz=w600" alt="محصول مختار">
+        <img src="https://drive.google.com/thumbnail?id=10qXBBO8IlWw0V4aORvVxUTI34g8kuYjF&sz=w600" alt="محصول مختار">
       </div>
       <div class="product-info">
         <span class="product-tag">✨ محصول موسمي</span>
@@ -235,7 +235,7 @@ footer{background:var(--brown);color:#fff;text-align:center;padding:28px;font-si
         <p>مزيج متوازن من أجود المحاصيل الموسمية المختارة بعناية — نكهات غنية ومتناسقة</p>
         <div class="product-footer">
           <div class="price">70 <span>ريال</span></div>
-          <button class="add-btn" onclick="addToCart('كيس المزيج الموسمي')">أضف للسلة</button>
+          <button class="add-btn" onclick="addToCart('كيس المزيج الموسمي', 70)">أضف للسلة</button>
         </div>
       </div>
     </div>
@@ -262,7 +262,7 @@ footer{background:var(--brown);color:#fff;text-align:center;padding:28px;font-si
         <p>أكواب ورقية بتصميم Kaldi المميز</p>
         <div class="extra-footer">
           <div class="extra-price">45 <span>ريال</span></div>
-          <button class="add-btn" onclick="addToCart('أكواب Kaldi 25 كوب')">أضف</button>
+          <button class="add-btn" onclick="addToCart('أكواب Kaldi 25 كوب', 45)">أضف</button>
         </div>
       </div>
     </div>
@@ -277,7 +277,7 @@ footer{background:var(--brown);color:#fff;text-align:center;padding:28px;font-si
         <p>أكواب ورقية بتصميم Kaldi المميز — قيمة أفضل</p>
         <div class="extra-footer">
           <div class="extra-price">80 <span>ريال</span></div>
-          <button class="add-btn" onclick="addToCart('أكواب Kaldi 50 كوب')">أضف</button>
+          <button class="add-btn" onclick="addToCart('أكواب Kaldi 50 كوب', 80)">أضف</button>
         </div>
       </div>
     </div>
@@ -292,7 +292,7 @@ footer{background:var(--brown);color:#fff;text-align:center;padding:28px;font-si
         <p>مجموعة ستيكرات بتصاميم Kaldi الحصرية</p>
         <div class="extra-footer">
           <div class="extra-price">20 <span>ريال</span></div>
-          <button class="add-btn" onclick="addToCart('ستيكرات Kaldi')">أضف</button>
+          <button class="add-btn" onclick="addToCart('ستيكرات Kaldi', 20)">أضف</button>
         </div>
       </div>
     </div>
@@ -313,7 +313,7 @@ footer{background:var(--brown);color:#fff;text-align:center;padding:28px;font-si
       <h3>البوكس الكامل</h3>
       <p>يحتوي على مجموعة مختارة من أجود محاصيل Kaldi — هدية مثالية أو متعة شخصية لتجربة قهوة استثنائية.</p>
       <div class="box-price">220 <span>ريال</span></div>
-      <button class="btn-primary" style="font-size:16px;padding:16px 36px;" onclick="addToCart('بوكس Kaldi الكامل')">أضف للسلة 🛒</button>
+      <button class="btn-primary" style="font-size:16px;padding:16px 36px;" onclick="addToCart('بوكس Kaldi الكامل', 220)">أضف للسلة 🛒</button>
     </div>
   </div>
 </section>
@@ -391,17 +391,32 @@ footer{background:var(--brown);color:#fff;text-align:center;padding:28px;font-si
 <div class="cart-toast" id="toast"></div>
 
 <script>
-let cartCount=0;
-function addToCart(name){
-  cartCount++;
-  document.getElementById('cart-count').textContent=cartCount;
-  const t=document.getElementById('toast');
-  t.textContent='✅ تمت الإضافة: '+name;
+let cart = [];
+function addToCart(name, price) {
+  const existing = cart.find(i => i.name === name);
+  if (existing) { existing.qty++; }
+  else { cart.push({name, price, qty: 1}); }
+  const total = cart.reduce((s,i) => s + i.qty, 0);
+  document.getElementById('cart-count').textContent = total;
+  const t = document.getElementById('toast');
+  t.textContent = '✅ تمت الإضافة: ' + name;
   t.classList.add('show');
-  setTimeout(()=>t.classList.remove('show'),2500);
+  setTimeout(() => t.classList.remove('show'), 2500);
 }
-function showCart(){
-  alert('🛒 عدد المنتجات في السلة: '+cartCount+'\nشكراً لتسوقك مع Kaldi!');
+function showCart() {
+  if (cart.length === 0) {
+    alert('🛒 السلة فارغة!\nأضف منتجات للمتابعة.');
+    return;
+  }
+  let msg = '🛒 سلة التسوق:\n\n';
+  let total = 0;
+  cart.forEach(i => {
+    msg += '• ' + i.name + ' × ' + i.qty + ' = ' + (i.price * i.qty) + ' ريال\n';
+    total += i.price * i.qty;
+  });
+  msg += '\n💰 الإجمالي: ' + total + ' ريال';
+  msg += '\n\nللطلب تواصل معنا:\n📞 0512345678\n💬 واتساب: 0512345678';
+  alert(msg);
 }
 </script>
 </body>
