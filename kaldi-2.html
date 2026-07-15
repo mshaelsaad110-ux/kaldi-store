@@ -12,136 +12,208 @@
   --brown:#3D2B1F;
   --brown-mid:#6B4226;
   --green:#1B5E4B;
-  --green-light:#4A9078;
   --orange:#E8652A;
   --beige:#E8DCC8;
-  --text:#2C1810;
 }
-body{font-family:'Tajawal',sans-serif;background:var(--cream);color:var(--text);overflow-x:hidden;}
+body{font-family:'Tajawal',sans-serif;background:var(--cream);color:var(--brown);overflow-x:hidden;}
 
 /* NAV */
-nav{background:var(--cream);border-bottom:1px solid var(--beige);padding:16px 40px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100;}
-.nav-logo img{height:48px;object-fit:contain;}
-.nav-links{display:flex;gap:32px;list-style:none;}
-.nav-links a{text-decoration:none;color:var(--brown);font-size:15px;font-weight:500;transition:color 0.2s;}
+nav{background:var(--cream);border-bottom:1px solid var(--beige);padding:14px 40px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:200;}
+.nav-logo img{height:44px;object-fit:contain;}
+.nav-links{display:flex;gap:28px;list-style:none;}
+.nav-links a{text-decoration:none;color:var(--brown);font-size:14px;font-weight:500;cursor:pointer;transition:color 0.2s;}
 .nav-links a:hover{color:var(--green);}
-.nav-cart{background:var(--brown);color:#fff;padding:10px 24px;border-radius:30px;border:none;cursor:pointer;font-family:'Tajawal',sans-serif;font-size:14px;font-weight:600;transition:background 0.2s;display:flex;align-items:center;gap:8px;}
+.nav-cart{background:var(--brown);color:#fff;padding:10px 22px;border-radius:30px;border:none;cursor:pointer;font-family:'Tajawal',sans-serif;font-size:14px;font-weight:600;display:flex;align-items:center;gap:8px;transition:background 0.2s;}
 .nav-cart:hover{background:var(--green);}
+.cart-badge{background:var(--orange);color:#fff;border-radius:50%;width:20px;height:20px;font-size:11px;display:inline-flex;align-items:center;justify-content:center;font-weight:700;}
 
 /* HERO */
-.hero{min-height:90vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:60px 80px;gap:60px;background:var(--cream);position:relative;overflow:hidden;}
-.hero-text h1{font-family:'Playfair Display',serif;font-size:64px;line-height:1.1;color:var(--brown);margin-bottom:20px;}
+.hero{min-height:88vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:60px 80px;gap:60px;}
+.hero-text h1{font-family:'Playfair Display',serif;font-size:62px;line-height:1.1;margin-bottom:18px;}
 .hero-text h1 span{color:var(--green);}
-.hero-text p{font-size:17px;color:var(--brown-mid);line-height:1.8;margin-bottom:36px;}
-.hero-btns{display:flex;gap:16px;flex-wrap:wrap;}
-.btn-primary{background:var(--brown);color:#fff;padding:14px 32px;border-radius:30px;border:none;font-family:'Tajawal',sans-serif;font-size:15px;font-weight:600;cursor:pointer;transition:all 0.2s;}
+.hero-text p{font-size:16px;color:var(--brown-mid);line-height:1.8;margin-bottom:32px;}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;}
+.btn-primary{background:var(--brown);color:#fff;padding:13px 30px;border-radius:30px;border:none;font-family:'Tajawal',sans-serif;font-size:15px;font-weight:600;cursor:pointer;transition:background 0.2s;}
 .btn-primary:hover{background:var(--green);}
-.btn-outline{background:transparent;color:var(--brown);padding:14px 32px;border-radius:30px;border:2px solid var(--brown);font-family:'Tajawal',sans-serif;font-size:15px;font-weight:600;cursor:pointer;transition:all 0.2s;}
+.btn-outline{background:transparent;color:var(--brown);padding:13px 30px;border-radius:30px;border:2px solid var(--brown);font-family:'Tajawal',sans-serif;font-size:15px;font-weight:600;cursor:pointer;transition:all 0.2s;}
 .btn-outline:hover{border-color:var(--green);color:var(--green);}
-.hero-img{display:flex;justify-content:center;align-items:center;position:relative;}
-.hero-img img{width:100%;max-width:460px;object-fit:contain;filter:drop-shadow(0 20px 40px rgba(61,43,31,0.2));animation:float 4s ease-in-out infinite;}
+.hero-img{display:flex;justify-content:center;position:relative;}
+.hero-img img{width:100%;max-width:440px;object-fit:contain;filter:drop-shadow(0 20px 40px rgba(61,43,31,0.2));animation:float 4s ease-in-out infinite;}
 @keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-14px);}}
-.hero-badge{position:absolute;top:20px;right:10px;background:var(--orange);color:#fff;width:88px;height:88px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:11px;font-weight:700;text-align:center;line-height:1.4;}
+.hero-badge{position:absolute;top:16px;right:8px;background:var(--orange);color:#fff;width:84px;height:84px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:11px;font-weight:700;text-align:center;line-height:1.4;}
 
 /* STRIP */
-.strip{background:var(--brown);color:#fff;padding:20px 80px;display:flex;justify-content:space-around;align-items:center;gap:20px;flex-wrap:wrap;}
+.strip{background:var(--brown);color:#fff;padding:18px 80px;display:flex;justify-content:space-around;flex-wrap:wrap;gap:16px;}
 .strip-item{text-align:center;}
-.strip-item h3{font-size:28px;font-weight:700;color:var(--orange);}
-.strip-item p{font-size:13px;opacity:0.8;}
+.strip-item h3{font-size:26px;font-weight:700;color:var(--orange);}
+.strip-item p{font-size:12px;opacity:0.8;}
 
-/* SECTION SHARED */
-section{padding:80px;}
-.sec-header{text-align:center;margin-bottom:56px;}
-.sec-header h2{font-family:'Playfair Display',serif;font-size:46px;color:var(--brown);margin-bottom:10px;}
-.sec-header p{color:var(--brown-mid);font-size:16px;}
-.sec-line{width:56px;height:3px;background:var(--green);border-radius:2px;margin:12px auto 0;}
+/* SECTIONS */
+.sec{padding:72px 80px;}
+.sec-alt{background:var(--beige);}
+.sec-header{text-align:center;margin-bottom:52px;}
+.sec-header h2{font-family:'Playfair Display',serif;font-size:44px;margin-bottom:8px;}
+.sec-header p{color:var(--brown-mid);font-size:15px;}
+.sec-line{width:52px;height:3px;background:var(--green);border-radius:2px;margin:10px auto 0;}
 
 /* PRODUCTS */
-.products-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px;}
-.product-card{background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 4px 20px rgba(61,43,31,0.08);transition:transform 0.3s,box-shadow 0.3s;}
-.product-card:hover{transform:translateY(-6px);box-shadow:0 12px 40px rgba(61,43,31,0.15);}
-.product-img{height:260px;display:flex;align-items:center;justify-content:center;padding:20px;background:var(--cream);}
-.product-img img{max-height:220px;max-width:100%;object-fit:contain;transition:transform 0.3s;}
-.product-card:hover .product-img img{transform:scale(1.05);}
-.product-info{padding:20px 24px 24px;}
+.products-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;}
+.product-card{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 4px 18px rgba(61,43,31,0.08);transition:transform 0.3s,box-shadow 0.3s;}
+.product-card:hover{transform:translateY(-5px);box-shadow:0 10px 36px rgba(61,43,31,0.14);}
+.product-img{height:240px;display:flex;align-items:center;justify-content:center;padding:20px;background:var(--cream);}
+.product-img img{max-height:200px;max-width:100%;object-fit:contain;transition:transform 0.3s;}
+.product-card:hover .product-img img{transform:scale(1.04);}
+.product-info{padding:18px 22px 22px;}
 .product-tag{display:inline-block;background:var(--green);color:#fff;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;margin-bottom:8px;}
-.product-info h3{font-size:18px;font-weight:700;color:var(--brown);margin-bottom:6px;}
-.product-info p{font-size:13px;color:var(--brown-mid);line-height:1.6;margin-bottom:16px;}
+.product-info h3{font-size:17px;font-weight:700;margin-bottom:6px;}
+.product-info p{font-size:12px;color:var(--brown-mid);line-height:1.6;margin-bottom:14px;}
 .product-footer{display:flex;justify-content:space-between;align-items:center;}
-.price{font-size:22px;font-weight:700;color:var(--brown);}
-.price span{font-size:13px;font-weight:400;color:var(--brown-mid);}
-.add-btn{background:var(--brown);color:#fff;border:none;padding:10px 20px;border-radius:20px;font-family:'Tajawal',sans-serif;font-size:13px;font-weight:600;cursor:pointer;transition:background 0.2s;}
+.price{font-size:21px;font-weight:700;}
+.price span{font-size:12px;font-weight:400;color:var(--brown-mid);}
+.add-btn{background:var(--brown);color:#fff;border:none;padding:9px 18px;border-radius:20px;font-family:'Tajawal',sans-serif;font-size:13px;font-weight:600;cursor:pointer;transition:background 0.2s;}
 .add-btn:hover{background:var(--green);}
 
 /* EXTRAS */
-.extras{background:var(--beige);padding:80px;}
-.extras-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-top:48px;}
-.extra-card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 2px 12px rgba(61,43,31,0.07);transition:transform 0.2s;}
-.extra-card:hover{transform:translateY(-4px);}
-.extra-img{height:180px;display:flex;align-items:center;justify-content:center;background:var(--cream);padding:16px;}
-.extra-img img{max-height:150px;object-fit:contain;}
-.extra-info{padding:16px 18px 18px;}
+.extras-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;}
+.extra-card{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 2px 10px rgba(61,43,31,0.07);transition:transform 0.2s;}
+.extra-card:hover{transform:translateY(-3px);}
+.extra-img{height:160px;display:flex;align-items:center;justify-content:center;background:var(--cream);padding:14px;}
+.extra-img img{max-height:130px;object-fit:contain;}
+.extra-info{padding:14px 16px 16px;}
 .extra-tag{display:inline-block;background:var(--orange);color:#fff;font-size:10px;font-weight:700;padding:2px 8px;border-radius:20px;margin-bottom:6px;}
-.extra-info h3{font-size:15px;font-weight:700;color:var(--brown);margin-bottom:4px;}
-.extra-info p{font-size:12px;color:var(--brown-mid);margin-bottom:12px;}
+.extra-info h3{font-size:14px;font-weight:700;margin-bottom:4px;}
+.extra-info p{font-size:11px;color:var(--brown-mid);margin-bottom:10px;}
 .extra-footer{display:flex;justify-content:space-between;align-items:center;}
-.extra-price{font-size:18px;font-weight:700;color:var(--brown);}
-.extra-price span{font-size:12px;color:var(--brown-mid);}
-
-/* STORY */
-.story{background:var(--brown);color:#fff;padding:100px 80px;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
-.story-text h2{font-family:'Playfair Display',serif;font-size:46px;margin-bottom:20px;line-height:1.2;}
-.story-text h2 span{color:var(--orange);}
-.story-text p{font-size:16px;line-height:1.9;opacity:0.85;margin-bottom:20px;}
-.story-logo{display:flex;justify-content:center;align-items:center;background:var(--cream);border-radius:20px;padding:40px;}
-.story-logo img{max-width:280px;max-height:280px;object-fit:contain;}
+.extra-price{font-size:17px;font-weight:700;}
 
 /* BOX */
-.box-card{background:var(--brown);color:#fff;border-radius:24px;padding:60px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;max-width:900px;margin:48px auto 0;}
-.box-card img{width:100%;border-radius:16px;object-fit:contain;max-height:400px;}
-.box-info h3{font-family:'Playfair Display',serif;font-size:40px;margin-bottom:16px;}
-.box-info p{font-size:15px;line-height:1.8;opacity:0.85;margin-bottom:24px;}
-.box-price{font-size:36px;font-weight:700;color:var(--orange);margin-bottom:24px;}
-.box-price span{font-size:16px;opacity:0.7;color:#fff;}
+.box-card{background:var(--brown);color:#fff;border-radius:22px;padding:52px;display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center;max-width:860px;margin:44px auto 0;}
+.box-card img{width:100%;border-radius:14px;object-fit:contain;max-height:380px;}
+.box-info h3{font-family:'Playfair Display',serif;font-size:38px;margin-bottom:14px;}
+.box-info p{font-size:14px;line-height:1.8;opacity:0.85;margin-bottom:20px;}
+.box-price{font-size:34px;font-weight:700;color:var(--orange);margin-bottom:20px;}
+
+/* STORY */
+.story{background:var(--brown);color:#fff;padding:90px 80px;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;}
+.story-text h2{font-family:'Playfair Display',serif;font-size:44px;margin-bottom:18px;}
+.story-text h2 span{color:var(--orange);}
+.story-text p{font-size:15px;line-height:1.9;opacity:0.85;margin-bottom:18px;}
+.story-logo{background:var(--cream);border-radius:18px;padding:36px;display:flex;align-items:center;justify-content:center;}
+.story-logo img{max-width:260px;max-height:260px;object-fit:contain;}
 
 /* ORIGINS */
-.origins-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px;}
-.origin-card{background:#fff;border-radius:16px;padding:32px 24px;text-align:center;border:1px solid rgba(61,43,31,0.1);}
-.origin-flag{font-size:48px;margin-bottom:16px;}
-.origin-card h3{font-size:20px;font-weight:700;color:var(--brown);margin-bottom:8px;}
-.origin-card p{font-size:14px;color:var(--brown-mid);line-height:1.7;}
-.origin-notes{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:12px;}
-.note{background:var(--green);color:#fff;font-size:11px;padding:3px 10px;border-radius:20px;}
+.origins-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.origin-card{background:#fff;border-radius:14px;padding:28px 20px;text-align:center;border:1px solid rgba(61,43,31,0.1);}
+.origin-flag{font-size:44px;margin-bottom:14px;}
+.origin-card h3{font-size:18px;font-weight:700;margin-bottom:7px;}
+.origin-card p{font-size:13px;color:var(--brown-mid);line-height:1.7;}
+.notes{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin-top:10px;}
+.note{background:var(--green);color:#fff;font-size:10px;padding:3px 9px;border-radius:20px;}
 
 /* CONTACT */
-.contact{background:var(--green);color:#fff;text-align:center;padding:80px;}
-.contact h2{font-family:'Playfair Display',serif;font-size:46px;margin-bottom:16px;}
-.contact p{font-size:16px;opacity:0.85;margin-bottom:36px;}
-.contact-links{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:36px;}
-.contact-link{background:rgba(255,255,255,0.15);color:#fff;padding:14px 24px;border-radius:30px;text-decoration:none;font-size:15px;font-weight:600;display:flex;align-items:center;gap:8px;transition:background 0.2s;}
-.contact-link:hover{background:rgba(255,255,255,0.25);}
-.contact-form{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;max-width:500px;margin:0 auto;}
-.contact-form input{flex:1;padding:14px 20px;border-radius:30px;border:none;font-family:'Tajawal',sans-serif;font-size:15px;min-width:200px;}
-.contact-form button{background:var(--orange);color:#fff;padding:14px 28px;border-radius:30px;border:none;font-family:'Tajawal',sans-serif;font-size:15px;font-weight:600;cursor:pointer;}
+.contact{background:var(--green);color:#fff;text-align:center;padding:72px 80px;}
+.contact h2{font-family:'Playfair Display',serif;font-size:44px;margin-bottom:14px;}
+.contact p{font-size:15px;opacity:0.85;margin-bottom:32px;}
+.contact-links{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:32px;}
+.c-link{background:rgba(255,255,255,0.15);color:#fff;padding:13px 22px;border-radius:30px;text-decoration:none;font-size:14px;font-weight:600;display:flex;align-items:center;gap:8px;transition:background 0.2s;}
+.c-link:hover{background:rgba(255,255,255,0.25);}
+.sub-form{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;max-width:480px;margin:0 auto;}
+.sub-form input{flex:1;padding:13px 18px;border-radius:30px;border:none;font-family:'Tajawal',sans-serif;font-size:14px;min-width:180px;}
+.sub-form button{background:var(--orange);color:#fff;padding:13px 26px;border-radius:30px;border:none;font-family:'Tajawal',sans-serif;font-size:14px;font-weight:600;cursor:pointer;}
 
-footer{background:var(--brown);color:#fff;text-align:center;padding:28px;font-size:14px;opacity:0.8;}
+footer{background:var(--brown);color:#fff;text-align:center;padding:24px;font-size:13px;opacity:0.75;}
 
-.cart-toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(100px);background:var(--green);color:#fff;padding:14px 28px;border-radius:30px;font-size:15px;font-weight:600;transition:transform 0.3s,opacity 0.3s;z-index:999;opacity:0;}
-.cart-toast.show{transform:translateX(-50%) translateY(0);opacity:1;}
+/* CART SIDEBAR */
+.cart-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:300;opacity:0;pointer-events:none;transition:opacity 0.3s;}
+.cart-overlay.open{opacity:1;pointer-events:all;}
+.cart-sidebar{position:fixed;left:0;top:0;bottom:0;width:420px;background:#fff;z-index:301;transform:translateX(-100%);transition:transform 0.3s;display:flex;flex-direction:column;}
+.cart-sidebar.open{transform:translateX(0);}
+.cart-header{padding:20px 24px;border-bottom:1px solid #eee;display:flex;justify-content:space-between;align-items:center;}
+.cart-header h3{font-size:20px;font-weight:700;}
+.close-btn{background:none;border:none;font-size:22px;cursor:pointer;color:var(--brown);}
+.cart-items{flex:1;overflow-y:auto;padding:20px 24px;}
+.cart-item{display:flex;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid #f5f5f5;}
+.cart-item img{width:60px;height:60px;object-fit:contain;border-radius:8px;background:var(--cream);}
+.cart-item-info{flex:1;}
+.cart-item-name{font-size:14px;font-weight:600;margin-bottom:4px;}
+.cart-item-price{font-size:13px;color:var(--brown-mid);}
+.cart-item-qty{display:flex;align-items:center;gap:8px;margin-top:6px;}
+.qty-btn{background:var(--beige);border:none;width:26px;height:26px;border-radius:50%;cursor:pointer;font-size:14px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+.qty-val{font-size:14px;font-weight:600;min-width:20px;text-align:center;}
+.remove-item{background:none;border:none;color:#ccc;cursor:pointer;font-size:16px;padding:4px;}
+.remove-item:hover{color:#e53e3e;}
+.cart-empty{text-align:center;padding:60px 20px;color:#999;}
+.cart-empty div{font-size:48px;margin-bottom:12px;}
+.cart-footer{padding:20px 24px;border-top:1px solid #eee;}
+.cart-total{display:flex;justify-content:space-between;font-size:18px;font-weight:700;margin-bottom:16px;}
+.checkout-btn{width:100%;background:var(--brown);color:#fff;border:none;padding:16px;border-radius:12px;font-family:'Tajawal',sans-serif;font-size:16px;font-weight:700;cursor:pointer;transition:background 0.2s;}
+.checkout-btn:hover{background:var(--green);}
+
+/* CHECKOUT MODAL */
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:400;display:none;align-items:center;justify-content:center;padding:20px;}
+.modal-overlay.open{display:flex;}
+.modal{background:#fff;border-radius:20px;width:100%;max-width:520px;max-height:90vh;overflow-y:auto;}
+.modal-header{padding:20px 24px;border-bottom:1px solid #eee;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;background:#fff;}
+.modal-header h3{font-size:20px;font-weight:700;}
+.modal-body{padding:24px;}
+.form-steps{display:flex;gap:0;margin-bottom:28px;}
+.step{flex:1;text-align:center;position:relative;}
+.step::after{content:'';position:absolute;top:14px;left:50%;width:100%;height:2px;background:#eee;z-index:0;}
+.step:last-child::after{display:none;}
+.step-dot{width:28px;height:28px;border-radius:50%;background:#eee;color:#999;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;margin:0 auto 6px;position:relative;z-index:1;transition:all 0.3s;}
+.step.active .step-dot{background:var(--brown);color:#fff;}
+.step.done .step-dot{background:var(--green);color:#fff;}
+.step-label{font-size:11px;color:#999;}
+.step.active .step-label{color:var(--brown);font-weight:600;}
+.form-section{display:none;}
+.form-section.active{display:block;}
+.form-group{margin-bottom:18px;}
+.form-group label{display:block;font-size:13px;font-weight:600;margin-bottom:7px;color:var(--brown);}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:12px 16px;border:1.5px solid #e0e0e0;border-radius:10px;font-family:'Tajawal',sans-serif;font-size:14px;outline:none;transition:border-color 0.2s;}
+.form-group input:focus,.form-group select:focus{border-color:var(--brown);}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.payment-options{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.payment-option{border:2px solid #e0e0e0;border-radius:12px;padding:14px;cursor:pointer;text-align:center;transition:all 0.2s;}
+.payment-option.selected{border-color:var(--brown);background:#faf7f4;}
+.payment-icon{font-size:28px;margin-bottom:6px;}
+.payment-name{font-size:13px;font-weight:600;}
+.shipping-options{display:flex;flex-direction:column;gap:10px;}
+.shipping-option{border:2px solid #e0e0e0;border-radius:12px;padding:14px 16px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;transition:all 0.2s;}
+.shipping-option.selected{border-color:var(--brown);background:#faf7f4;}
+.shipping-name{font-size:14px;font-weight:600;}
+.shipping-desc{font-size:12px;color:#888;margin-top:2px;}
+.shipping-price{font-size:14px;font-weight:700;color:var(--brown);}
+.order-summary{background:var(--cream);border-radius:12px;padding:16px;margin-bottom:20px;}
+.order-summary h4{font-size:15px;font-weight:700;margin-bottom:12px;}
+.summary-item{display:flex;justify-content:space-between;font-size:13px;padding:5px 0;border-bottom:1px solid rgba(0,0,0,0.06);}
+.summary-item:last-child{border:none;font-weight:700;font-size:15px;margin-top:4px;}
+.modal-nav{display:flex;gap:10px;margin-top:24px;}
+.btn-next{flex:1;background:var(--brown);color:#fff;border:none;padding:14px;border-radius:10px;font-family:'Tajawal',sans-serif;font-size:15px;font-weight:700;cursor:pointer;transition:background 0.2s;}
+.btn-next:hover{background:var(--green);}
+.btn-back{background:var(--beige);color:var(--brown);border:none;padding:14px 20px;border-radius:10px;font-family:'Tajawal',sans-serif;font-size:15px;font-weight:600;cursor:pointer;}
+.success-screen{text-align:center;padding:20px 0;}
+.success-icon{font-size:64px;margin-bottom:16px;}
+.success-screen h3{font-size:22px;font-weight:700;margin-bottom:10px;}
+.success-screen p{font-size:14px;color:#666;line-height:1.7;margin-bottom:24px;}
+.whatsapp-btn{background:#25D366;color:#fff;border:none;padding:14px 28px;border-radius:30px;font-family:'Tajawal',sans-serif;font-size:15px;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:10px;}
+
+/* TOAST */
+.toast{position:fixed;bottom:24px;right:24px;background:var(--green);color:#fff;padding:13px 22px;border-radius:30px;font-size:14px;font-weight:600;z-index:500;opacity:0;transform:translateY(20px);transition:all 0.3s;}
+.toast.show{opacity:1;transform:translateY(0);}
 
 @media(max-width:768px){
-  .hero{grid-template-columns:1fr;padding:40px 24px;text-align:center;}
+  .hero{grid-template-columns:1fr;padding:40px 20px;text-align:center;}
   .hero-text h1{font-size:40px;}
   .hero-btns{justify-content:center;}
-  .strip{padding:20px 24px;}
-  section{padding:60px 24px;}
-  .extras{padding:60px 24px;}
-  .story{grid-template-columns:1fr;padding:60px 24px;}
+  .strip,.sec,.sec-alt,.story,.contact{padding:52px 20px;}
+  .story{grid-template-columns:1fr;}
   .origins-grid{grid-template-columns:1fr;}
-  .box-card{grid-template-columns:1fr;padding:32px;}
-  .contact{padding:60px 24px;}
-  nav{padding:14px 20px;}
+  .box-card{grid-template-columns:1fr;padding:28px;}
+  nav{padding:12px 18px;}
   .nav-links{display:none;}
+  .cart-sidebar{width:100%;}
+  .form-row{grid-template-columns:1fr;}
+  .payment-options{grid-template-columns:1fr 1fr;}
 }
 </style>
 </head>
@@ -153,30 +225,32 @@ footer{background:var(--brown);color:#fff;text-align:center;padding:28px;font-si
     <img src="https://drive.google.com/thumbnail?id=1GPTmG2LJf5Tt7OHJCJMwjSYaBX5Ot87k&sz=w200" alt="Kaldi">
   </div>
   <ul class="nav-links">
-    <li><a href="#products">المنتجات</a></li>
-    <li><a href="#extras">الإضافات</a></li>
-    <li><a href="#story">قصتنا</a></li>
-    <li><a href="#origins">المحاصيل</a></li>
-    <li><a href="#contact">تواصل</a></li>
+    <li><a onclick="scrollTo('products')">المنتجات</a></li>
+    <li><a onclick="scrollTo('extras')">الإضافات</a></li>
+    <li><a onclick="scrollTo('story')">قصتنا</a></li>
+    <li><a onclick="scrollTo('origins')">المحاصيل</a></li>
+    <li><a onclick="scrollTo('contact')">تواصل</a></li>
   </ul>
-  <button class="nav-cart" onclick="showCart()">🛒 السلة <span id="cart-count">0</span></button>
+  <button class="nav-cart" onclick="openCart()">
+    🛒 السلة <span class="cart-badge" id="cart-count">0</span>
+  </button>
 </nav>
 
 <!-- HERO -->
-<section class="hero" style="padding:60px 80px;">
+<div class="hero">
   <div class="hero-text">
     <h1>قهوة تحكي<br><span>قصة كل حبة</span></h1>
     <p>من أعلى المرتفعات الإثيوبية إلى فنجانك — Kaldi تختار لك أجود المحاصيل المختصة بعناية واهتمام.</p>
     <div class="hero-btns">
-      <button class="btn-primary" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">تسوق الآن</button>
-      <button class="btn-outline" onclick="document.getElementById('story').scrollIntoView({behavior:'smooth'})">قصتنا</button>
+      <button class="btn-primary" onclick="scrollTo('products')">تسوق الآن</button>
+      <button class="btn-outline" onclick="scrollTo('story')">قصتنا</button>
     </div>
   </div>
   <div class="hero-img">
-    <img src="https://drive.google.com/thumbnail?id=1mCUdgvsXQwp7zFz9gEnO10Obu_JhASiI&sz=w800" alt="Kaldi Coffee">
+    <img src="https://drive.google.com/thumbnail?id=1mCUdgvsXQwp7zFz9gEnO10Obu_JhASiI&sz=w800" alt="Kaldi">
     <div class="hero-badge">قهوة<br>مختصة<br>☕</div>
   </div>
-</section>
+</div>
 
 <!-- STRIP -->
 <div class="strip">
@@ -187,121 +261,101 @@ footer{background:var(--brown);color:#fff;text-align:center;padding:28px;font-si
 </div>
 
 <!-- PRODUCTS -->
-<section id="products" style="background:var(--cream);">
+<div class="sec" id="products">
   <div class="sec-header">
     <h2>منتجاتنا</h2>
     <p>اختر ما يناسب ذوقك من أجود محاصيل القهوة</p>
     <div class="sec-line"></div>
   </div>
   <div class="products-grid">
-
     <div class="product-card">
-      <div class="product-img">
-        <img src="https://drive.google.com/thumbnail?id=1mCUdgvsXQwp7zFz9gEnO10Obu_JhASiI&sz=w600" alt="كوستاريكا رودولفو">
-      </div>
+      <div class="product-img"><img src="https://drive.google.com/thumbnail?id=1mCUdgvsXQwp7zFz9gEnO10Obu_JhASiI&sz=w600" alt="كوستاريكا"></div>
       <div class="product-info">
         <span class="product-tag">🇨🇷 كوستاريكا</span>
         <h3>Kaldi — رودولفو</h3>
-        <p>حلاوة، بندق، سكريات بنية — محصول مغسول من ارتفاع 1600م | سلالة كاتوي</p>
+        <p>حلاوة، بندق، سكريات بنية — محصول مغسول من ارتفاع 1600م</p>
         <div class="product-footer">
           <div class="price">75 <span>ريال</span></div>
-          <button class="add-btn" onclick="addToCart('كيس رودولفو - كوستاريكا', 75)">أضف للسلة</button>
+          <button class="add-btn" onclick="addToCart('كيس رودولفو - كوستاريكا', 75, 'https://drive.google.com/thumbnail?id=1mCUdgvsXQwp7zFz9gEnO10Obu_JhASiI&sz=w200')">أضف للسلة</button>
         </div>
       </div>
     </div>
-
     <div class="product-card">
-      <div class="product-img">
-        <img src="https://drive.google.com/thumbnail?id=1NUwWWPQ5FL_dv2-2vD0qu9Jlx_MyB8hL&sz=w600" alt="إثيوبيا بيبرقاتشيفي">
-      </div>
+      <div class="product-img"><img src="https://drive.google.com/thumbnail?id=1NUwWWPQ5FL_dv2-2vD0qu9Jlx_MyB8hL&sz=w600" alt="إثيوبيا"></div>
       <div class="product-info">
         <span class="product-tag">🇪🇹 إثيوبيا</span>
         <h3>Kaldi — بيبرقاتشيفي</h3>
-        <p>فواكه حجرية، زهور، شوكولاتة — محصول مجفف من ارتفاع 2200م | سلالة هيريلييوم</p>
+        <p>فواكه حجرية، زهور، شوكولاتة — محصول مجفف من ارتفاع 2200م</p>
         <div class="product-footer">
           <div class="price">80 <span>ريال</span></div>
-          <button class="add-btn" onclick="addToCart('كيس بيبرقاتشيفي - إثيوبيا', 80)">أضف للسلة</button>
+          <button class="add-btn" onclick="addToCart('كيس بيبرقاتشيفي - إثيوبيا', 80, 'https://drive.google.com/thumbnail?id=1NUwWWPQ5FL_dv2-2vD0qu9Jlx_MyB8hL&sz=w200')">أضف للسلة</button>
         </div>
       </div>
     </div>
-
     <div class="product-card">
-      <div class="product-img">
-        <img src="https://drive.google.com/thumbnail?id=10qXBBO8IlWw0V4aORvVxUTI34g8kuYjF&sz=w600" alt="محصول مختار">
-      </div>
+      <div class="product-img"><img src="https://drive.google.com/thumbnail?id=10qXBBO8IlWw0V4aORvVxUTI34g8kuYjF&sz=w600" alt="موسمي"></div>
       <div class="product-info">
-        <span class="product-tag">✨ محصول موسمي</span>
+        <span class="product-tag">✨ موسمي</span>
         <h3>Kaldi — المزيج الموسمي</h3>
-        <p>مزيج متوازن من أجود المحاصيل الموسمية المختارة بعناية — نكهات غنية ومتناسقة</p>
+        <p>مزيج متوازن من أجود المحاصيل الموسمية المختارة بعناية</p>
         <div class="product-footer">
           <div class="price">70 <span>ريال</span></div>
-          <button class="add-btn" onclick="addToCart('كيس المزيج الموسمي', 70)">أضف للسلة</button>
+          <button class="add-btn" onclick="addToCart('كيس المزيج الموسمي', 70, 'https://drive.google.com/thumbnail?id=10qXBBO8IlWw0V4aORvVxUTI34g8kuYjF&sz=w200')">أضف للسلة</button>
         </div>
       </div>
     </div>
-
   </div>
-</section>
+</div>
 
 <!-- EXTRAS -->
-<section class="extras" id="extras">
+<div class="sec sec-alt" id="extras">
   <div class="sec-header">
     <h2>الإضافات</h2>
     <p>أكمل تجربة Kaldi مع مجموعة الإضافات المميزة</p>
     <div class="sec-line"></div>
   </div>
   <div class="extras-grid">
-
     <div class="extra-card">
-      <div class="extra-img">
-        <img src="https://drive.google.com/thumbnail?id=16-mrO1Crix8-yzMxEc3466E_f6yVJ4MJ&sz=w400" alt="أكواب Kaldi 25">
-      </div>
+      <div class="extra-img"><img src="https://drive.google.com/thumbnail?id=16-mrO1Crix8-yzMxEc3466E_f6yVJ4MJ&sz=w400" alt="أكواب 25"></div>
       <div class="extra-info">
         <span class="extra-tag">أكواب</span>
         <h3>أكواب Kaldi — 25 كوب</h3>
-        <p>أكواب ورقية بتصميم Kaldi المميز</p>
+        <p>أكواب بتصميم Kaldi المميز</p>
         <div class="extra-footer">
-          <div class="extra-price">45 <span>ريال</span></div>
-          <button class="add-btn" onclick="addToCart('أكواب Kaldi 25 كوب', 45)">أضف</button>
+          <div class="extra-price">45 <span style="font-size:11px;color:var(--brown-mid)">ريال</span></div>
+          <button class="add-btn" onclick="addToCart('أكواب Kaldi 25 كوب', 45, 'https://drive.google.com/thumbnail?id=16-mrO1Crix8-yzMxEc3466E_f6yVJ4MJ&sz=w200')">أضف</button>
         </div>
       </div>
     </div>
-
     <div class="extra-card">
-      <div class="extra-img">
-        <img src="https://drive.google.com/thumbnail?id=16-mrO1Crix8-yzMxEc3466E_f6yVJ4MJ&sz=w400" alt="أكواب Kaldi 50">
-      </div>
+      <div class="extra-img"><img src="https://drive.google.com/thumbnail?id=16-mrO1Crix8-yzMxEc3466E_f6yVJ4MJ&sz=w400" alt="أكواب 50"></div>
       <div class="extra-info">
         <span class="extra-tag">أكواب</span>
         <h3>أكواب Kaldi — 50 كوب</h3>
-        <p>أكواب ورقية بتصميم Kaldi المميز — قيمة أفضل</p>
+        <p>قيمة أفضل للكميات الكبيرة</p>
         <div class="extra-footer">
-          <div class="extra-price">80 <span>ريال</span></div>
-          <button class="add-btn" onclick="addToCart('أكواب Kaldi 50 كوب', 80)">أضف</button>
+          <div class="extra-price">80 <span style="font-size:11px;color:var(--brown-mid)">ريال</span></div>
+          <button class="add-btn" onclick="addToCart('أكواب Kaldi 50 كوب', 80, 'https://drive.google.com/thumbnail?id=16-mrO1Crix8-yzMxEc3466E_f6yVJ4MJ&sz=w200')">أضف</button>
         </div>
       </div>
     </div>
-
     <div class="extra-card">
-      <div class="extra-img">
-        <img src="https://drive.google.com/thumbnail?id=10Yb2TjT3DNWHo-6kMLG8bclnJ9UperzL&sz=w400" alt="ستيكرات Kaldi">
-      </div>
+      <div class="extra-img"><img src="https://drive.google.com/thumbnail?id=10Yb2TjT3DNWHo-6kMLG8bclnJ9UperzL&sz=w400" alt="ستيكرات"></div>
       <div class="extra-info">
         <span class="extra-tag">ستيكرات</span>
         <h3>ستيكرات Kaldi</h3>
-        <p>مجموعة ستيكرات بتصاميم Kaldi الحصرية</p>
+        <p>تصاميم حصرية بهوية Kaldi</p>
         <div class="extra-footer">
-          <div class="extra-price">20 <span>ريال</span></div>
-          <button class="add-btn" onclick="addToCart('ستيكرات Kaldi', 20)">أضف</button>
+          <div class="extra-price">20 <span style="font-size:11px;color:var(--brown-mid)">ريال</span></div>
+          <button class="add-btn" onclick="addToCart('ستيكرات Kaldi', 20, 'https://drive.google.com/thumbnail?id=10Yb2TjT3DNWHo-6kMLG8bclnJ9UperzL&sz=w200')">أضف</button>
         </div>
       </div>
     </div>
-
   </div>
-</section>
+</div>
 
 <!-- BOX -->
-<section style="background:var(--cream);text-align:center;">
+<div class="sec" style="text-align:center;">
   <div class="sec-header">
     <h2>بوكس Kaldi</h2>
     <p>الهدية المثالية لعشاق القهوة</p>
@@ -311,28 +365,28 @@ footer{background:var(--brown);color:#fff;text-align:center;padding:28px;font-si
     <img src="https://drive.google.com/thumbnail?id=1epInIQR3oc2nqfywdnoQi5eYPH4OqPyW&sz=w700" alt="Kaldi Box">
     <div class="box-info">
       <h3>البوكس الكامل</h3>
-      <p>يحتوي على مجموعة مختارة من أجود محاصيل Kaldi — هدية مثالية أو متعة شخصية لتجربة قهوة استثنائية.</p>
-      <div class="box-price">220 <span>ريال</span></div>
-      <button class="btn-primary" style="font-size:16px;padding:16px 36px;" onclick="addToCart('بوكس Kaldi الكامل', 220)">أضف للسلة 🛒</button>
+      <p>مجموعة مختارة من أجود محاصيل Kaldi — هدية مثالية أو متعة شخصية لتجربة قهوة استثنائية.</p>
+      <div class="box-price">220 ريال</div>
+      <button class="btn-primary" style="font-size:16px;padding:15px 34px;" onclick="addToCart('بوكس Kaldi الكامل', 220, 'https://drive.google.com/thumbnail?id=1epInIQR3oc2nqfywdnoQi5eYPH4OqPyW&sz=w200')">أضف للسلة 🛒</button>
     </div>
   </div>
-</section>
+</div>
 
 <!-- STORY -->
-<section class="story" id="story" style="padding:100px 80px;">
+<div class="story" id="story">
   <div class="story-text">
     <h2>قصة <span>Kaldi</span></h2>
     <p>يُحكى أن كالدي كان راعياً إثيوبياً لاحظ نشاطاً غريباً في قطيعه بعد أكلهم من ثمار شجرة معينة — كانت تلك بداية اكتشاف القهوة.</p>
     <p>نحن في Kaldi نحمل هذا الإرث بكل فخر، ونختار لك أجود المحاصيل من أصولها مباشرة لتحكي كل حبة قصتها في فنجانك.</p>
-    <button class="btn-primary" style="background:var(--orange);" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">اكتشف المحاصيل</button>
+    <button class="btn-primary" style="background:var(--orange);" onclick="scrollTo('products')">اكتشف المحاصيل</button>
   </div>
   <div class="story-logo">
     <img src="https://drive.google.com/thumbnail?id=1GPTmG2LJf5Tt7OHJCJMwjSYaBX5Ot87k&sz=w500" alt="Kaldi Logo">
   </div>
-</section>
+</div>
 
 <!-- ORIGINS -->
-<section id="origins" style="background:var(--beige);">
+<div class="sec sec-alt" id="origins">
   <div class="sec-header">
     <h2>محاصيلنا</h2>
     <p>من أعلى المرتفعات حول العالم</p>
@@ -342,81 +396,333 @@ footer{background:var(--brown);color:#fff;text-align:center;padding:28px;font-si
     <div class="origin-card">
       <div class="origin-flag">🇪🇹</div>
       <h3>إثيوبيا</h3>
-      <p>موطن القهوة الأصلي — محاصيل بيبرقاتشيفي من ارتفاع 2200م | سلالة هيريلييوم</p>
-      <div class="origin-notes">
-        <span class="note">فواكه حجرية</span>
-        <span class="note">زهور</span>
-        <span class="note">شوكولاتة</span>
-      </div>
+      <p>موطن القهوة الأصلي — بيبرقاتشيفي من ارتفاع 2200م</p>
+      <div class="notes"><span class="note">فواكه حجرية</span><span class="note">زهور</span><span class="note">شوكولاتة</span></div>
     </div>
     <div class="origin-card">
       <div class="origin-flag">🇨🇷</div>
       <h3>كوستاريكا</h3>
-      <p>منطقة رودولفو الشهيرة — محاصيل مغسولة بعناية فائقة | سلالة كاتوي</p>
-      <div class="origin-notes">
-        <span class="note">حلاوة</span>
-        <span class="note">بندق</span>
-        <span class="note">كراميل</span>
-      </div>
+      <p>منطقة رودولفو — محاصيل مغسولة بعناية فائقة</p>
+      <div class="notes"><span class="note">حلاوة</span><span class="note">بندق</span><span class="note">كراميل</span></div>
     </div>
     <div class="origin-card">
       <div class="origin-flag">🌍</div>
       <h3>محاصيل موسمية</h3>
-      <p>نختار لك أجود المحاصيل الموسمية من حول العالم بشكل دوري</p>
-      <div class="origin-notes">
-        <span class="note">نكهات متنوعة</span>
-        <span class="note">موسمية</span>
-      </div>
+      <p>أجود المحاصيل الموسمية من حول العالم بشكل دوري</p>
+      <div class="notes"><span class="note">نكهات متنوعة</span><span class="note">موسمية</span></div>
     </div>
   </div>
-</section>
+</div>
 
 <!-- CONTACT -->
-<section class="contact" id="contact">
+<div class="contact" id="contact">
   <h2>تواصل معنا</h2>
   <p>يسعدنا خدمتك — تواصل معنا بأي طريقة تناسبك</p>
   <div class="contact-links">
-    <a href="mailto:hello@kaldi-coffee.sa" class="contact-link">✉️ hello@kaldi-coffee.sa</a>
-    <a href="tel:+966512345678" class="contact-link">📞 0512345678</a>
-    <a href="https://wa.me/966512345678" class="contact-link">💬 واتساب</a>
+    <a href="mailto:hello@kaldi-coffee.sa" class="c-link">✉️ hello@kaldi-coffee.sa</a>
+    <a href="tel:+966512345678" class="c-link">📞 0512345678</a>
+    <a href="https://wa.me/966512345678" class="c-link">💬 واتساب</a>
   </div>
-  <div class="contact-form">
+  <div class="sub-form">
     <input type="email" placeholder="بريدك الإلكتروني للعروض الحصرية">
     <button>اشترك</button>
   </div>
-</section>
+</div>
 
 <footer>© 2025 Kaldi Coffee — جميع الحقوق محفوظة | قهوة مختصة بعناية ☕</footer>
 
-<div class="cart-toast" id="toast"></div>
+<!-- CART SIDEBAR -->
+<div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+<div class="cart-sidebar" id="cartSidebar">
+  <div class="cart-header">
+    <h3>🛒 سلة التسوق</h3>
+    <button class="close-btn" onclick="closeCart()">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <div class="cart-empty"><div>🛒</div><p>سلتك فارغة</p></div>
+  </div>
+  <div class="cart-footer" id="cartFooter" style="display:none;">
+    <div class="cart-total"><span>الإجمالي</span><span id="cartTotal">0 ريال</span></div>
+    <button class="checkout-btn" onclick="openCheckout()">إتمام الطلب ←</button>
+  </div>
+</div>
+
+<!-- CHECKOUT MODAL -->
+<div class="modal-overlay" id="checkoutModal">
+  <div class="modal">
+    <div class="modal-header">
+      <h3>إتمام الطلب</h3>
+      <button class="close-btn" onclick="closeCheckout()">✕</button>
+    </div>
+    <div class="modal-body">
+
+      <!-- STEPS -->
+      <div class="form-steps">
+        <div class="step active" id="step1dot"><div class="step-dot">1</div><div class="step-label">بياناتك</div></div>
+        <div class="step" id="step2dot"><div class="step-dot">2</div><div class="step-label">الشحن</div></div>
+        <div class="step" id="step3dot"><div class="step-dot">3</div><div class="step-label">الدفع</div></div>
+      </div>
+
+      <!-- STEP 1: PERSONAL INFO -->
+      <div class="form-section active" id="formStep1">
+        <div class="form-group">
+          <label>الاسم الكامل *</label>
+          <input type="text" id="fullName" placeholder="مشاعل سعد القحطاني">
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>رقم الجوال *</label>
+            <input type="tel" id="phone" placeholder="05XXXXXXXX">
+          </div>
+          <div class="form-group">
+            <label>البريد الإلكتروني</label>
+            <input type="email" id="email" placeholder="example@email.com">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>المدينة *</label>
+            <select id="city">
+              <option value="">اختر المدينة</option>
+              <option>الرياض</option><option>جدة</option><option>مكة المكرمة</option>
+              <option>المدينة المنورة</option><option>الدمام</option><option>الخبر</option>
+              <option>الطائف</option><option>تبوك</option><option>أبها</option><option>أخرى</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>الحي</label>
+            <input type="text" id="district" placeholder="اسم الحي">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>العنوان التفصيلي *</label>
+          <input type="text" id="address" placeholder="الشارع، رقم المبنى...">
+        </div>
+        <div class="form-group">
+          <label>ملاحظات على الطلب</label>
+          <textarea id="notes" rows="2" style="resize:none;" placeholder="أي ملاحظات إضافية..."></textarea>
+        </div>
+        <div class="modal-nav">
+          <button class="btn-next" onclick="goStep(2)">التالي ← الشحن</button>
+        </div>
+      </div>
+
+      <!-- STEP 2: SHIPPING -->
+      <div class="form-section" id="formStep2">
+        <p style="font-size:14px;color:#666;margin-bottom:16px;">اختر طريقة الشحن المناسبة</p>
+        <div class="shipping-options">
+          <div class="shipping-option selected" onclick="selectShipping(this, 0, 'توصيل داخل الرياض')" id="ship1">
+            <div><div class="shipping-name">🏙️ توصيل داخل الرياض</div><div class="shipping-desc">2-3 أيام عمل</div></div>
+            <div class="shipping-price">مجاني</div>
+          </div>
+          <div class="shipping-option" onclick="selectShipping(this, 25, 'شحن داخل المملكة')" id="ship2">
+            <div><div class="shipping-name">📦 شحن داخل المملكة</div><div class="shipping-desc">3-5 أيام عمل</div></div>
+            <div class="shipping-price">25 ريال</div>
+          </div>
+          <div class="shipping-option" onclick="selectShipping(this, 50, 'شحن سريع')" id="ship3">
+            <div><div class="shipping-name">⚡ شحن سريع</div><div class="shipping-desc">يوم عمل واحد</div></div>
+            <div class="shipping-price">50 ريال</div>
+          </div>
+        </div>
+        <div class="modal-nav">
+          <button class="btn-back" onclick="goStep(1)">← رجوع</button>
+          <button class="btn-next" onclick="goStep(3)">التالي ← الدفع</button>
+        </div>
+      </div>
+
+      <!-- STEP 3: PAYMENT -->
+      <div class="form-section" id="formStep3">
+        <div class="order-summary" id="orderSummary"></div>
+        <p style="font-size:14px;color:#666;margin-bottom:14px;">اختر طريقة الدفع</p>
+        <div class="payment-options">
+          <div class="payment-option selected" onclick="selectPayment(this,'الدفع عند الاستلام')">
+            <div class="payment-icon">💵</div>
+            <div class="payment-name">الدفع عند الاستلام</div>
+          </div>
+          <div class="payment-option" onclick="selectPayment(this,'تحويل بنكي')">
+            <div class="payment-icon">🏦</div>
+            <div class="payment-name">تحويل بنكي</div>
+          </div>
+          <div class="payment-option" onclick="selectPayment(this,'مدى / بطاقة')">
+            <div class="payment-icon">💳</div>
+            <div class="payment-name">مدى / بطاقة</div>
+          </div>
+          <div class="payment-option" onclick="selectPayment(this,'Apple Pay')">
+            <div class="payment-icon">🍎</div>
+            <div class="payment-name">Apple Pay</div>
+          </div>
+        </div>
+        <div class="modal-nav">
+          <button class="btn-back" onclick="goStep(2)">← رجوع</button>
+          <button class="btn-next" style="background:var(--green);" onclick="confirmOrder()">✅ تأكيد الطلب</button>
+        </div>
+      </div>
+
+      <!-- SUCCESS -->
+      <div class="form-section" id="formSuccess">
+        <div class="success-screen">
+          <div class="success-icon">🎉</div>
+          <h3>تم استلام طلبك!</h3>
+          <p>شكراً لك على طلبك من Kaldi ☕<br>سيتم التواصل معك قريباً لتأكيد الطلب وتفاصيل التوصيل.</p>
+          <button class="whatsapp-btn" onclick="sendWhatsapp()">
+            💬 تأكيد عبر واتساب
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
 
 <script>
 let cart = [];
-function addToCart(name, price) {
-  const existing = cart.find(i => i.name === name);
-  if (existing) { existing.qty++; }
-  else { cart.push({name, price, qty: 1}); }
-  const total = cart.reduce((s,i) => s + i.qty, 0);
-  document.getElementById('cart-count').textContent = total;
-  const t = document.getElementById('toast');
-  t.textContent = '✅ تمت الإضافة: ' + name;
-  t.classList.add('show');
-  setTimeout(() => t.classList.remove('show'), 2500);
+let shippingCost = 0;
+let shippingName = 'توصيل داخل الرياض';
+let paymentMethod = 'الدفع عند الاستلام';
+let currentStep = 1;
+
+function scrollTo(id){ document.getElementById(id).scrollIntoView({behavior:'smooth'}); }
+
+function addToCart(name, price, img) {
+  const ex = cart.find(i => i.name === name);
+  if (ex) ex.qty++;
+  else cart.push({name, price, img, qty:1});
+  updateCartUI();
+  showToast('✅ تمت الإضافة: ' + name);
 }
-function showCart() {
+
+function updateCartUI() {
+  const total = cart.reduce((s,i) => s+i.qty, 0);
+  document.getElementById('cart-count').textContent = total;
+  const itemsEl = document.getElementById('cartItems');
+  const footerEl = document.getElementById('cartFooter');
   if (cart.length === 0) {
-    alert('🛒 السلة فارغة!\nأضف منتجات للمتابعة.');
+    itemsEl.innerHTML = '<div class="cart-empty"><div>🛒</div><p>سلتك فارغة</p></div>';
+    footerEl.style.display = 'none';
     return;
   }
-  let msg = '🛒 سلة التسوق:\n\n';
-  let total = 0;
-  cart.forEach(i => {
-    msg += '• ' + i.name + ' × ' + i.qty + ' = ' + (i.price * i.qty) + ' ريال\n';
-    total += i.price * i.qty;
+  footerEl.style.display = 'block';
+  itemsEl.innerHTML = cart.map((item,i) => `
+    <div class="cart-item">
+      <img src="${item.img}" alt="${item.name}">
+      <div class="cart-item-info">
+        <div class="cart-item-name">${item.name}</div>
+        <div class="cart-item-price">${item.price} ريال</div>
+        <div class="cart-item-qty">
+          <button class="qty-btn" onclick="changeQty(${i},-1)">−</button>
+          <span class="qty-val">${item.qty}</span>
+          <button class="qty-btn" onclick="changeQty(${i},1)">+</button>
+        </div>
+      </div>
+      <button class="remove-item" onclick="removeItem(${i})">🗑</button>
+    </div>`).join('');
+  const subtotal = cart.reduce((s,i) => s + i.price*i.qty, 0);
+  document.getElementById('cartTotal').textContent = subtotal + ' ريال';
+}
+
+function changeQty(i, d) {
+  cart[i].qty += d;
+  if (cart[i].qty <= 0) cart.splice(i,1);
+  updateCartUI();
+}
+function removeItem(i) { cart.splice(i,1); updateCartUI(); }
+function openCart() { document.getElementById('cartOverlay').classList.add('open'); document.getElementById('cartSidebar').classList.add('open'); }
+function closeCart() { document.getElementById('cartOverlay').classList.remove('open'); document.getElementById('cartSidebar').classList.remove('open'); }
+
+function openCheckout() {
+  if (cart.length === 0) return;
+  closeCart();
+  currentStep = 1;
+  document.getElementById('checkoutModal').classList.add('open');
+  updateStepUI();
+}
+function closeCheckout() { document.getElementById('checkoutModal').classList.remove('open'); }
+
+function goStep(step) {
+  if (step === 2) {
+    if (!document.getElementById('fullName').value || !document.getElementById('phone').value || !document.getElementById('city').value || !document.getElementById('address').value) {
+      showToast('⚠️ يرجى تعبئة الحقول المطلوبة'); return;
+    }
+  }
+  currentStep = step;
+  if (step === 3) updateSummary();
+  updateStepUI();
+}
+
+function updateStepUI() {
+  ['formStep1','formStep2','formStep3','formSuccess'].forEach(id => {
+    document.getElementById(id).classList.remove('active');
   });
-  msg += '\n💰 الإجمالي: ' + total + ' ريال';
-  msg += '\n\nللطلب تواصل معنا:\n📞 0512345678\n💬 واتساب: 0512345678';
-  alert(msg);
+  const map = {1:'formStep1', 2:'formStep2', 3:'formStep3'};
+  if (map[currentStep]) document.getElementById(map[currentStep]).classList.add('active');
+  [1,2,3].forEach(n => {
+    const dot = document.getElementById('step'+n+'dot');
+    dot.classList.remove('active','done');
+    if (n < currentStep) dot.classList.add('done');
+    else if (n === currentStep) dot.classList.add('active');
+  });
+}
+
+function selectShipping(el, cost, name) {
+  document.querySelectorAll('.shipping-option').forEach(e => e.classList.remove('selected'));
+  el.classList.add('selected');
+  shippingCost = cost;
+  shippingName = name;
+}
+
+function selectPayment(el, method) {
+  document.querySelectorAll('.payment-option').forEach(e => e.classList.remove('selected'));
+  el.classList.add('selected');
+  paymentMethod = method;
+}
+
+function updateSummary() {
+  const subtotal = cart.reduce((s,i) => s + i.price*i.qty, 0);
+  const total = subtotal + shippingCost;
+  document.getElementById('orderSummary').innerHTML = `
+    <h4>ملخص الطلب</h4>
+    ${cart.map(i => `<div class="summary-item"><span>${i.name} × ${i.qty}</span><span>${i.price*i.qty} ريال</span></div>`).join('')}
+    <div class="summary-item"><span>الشحن (${shippingName})</span><span>${shippingCost === 0 ? 'مجاني' : shippingCost+' ريال'}</span></div>
+    <div class="summary-item"><span>الإجمالي</span><span>${total} ريال</span></div>`;
+}
+
+function confirmOrder() {
+  currentStep = 4;
+  ['formStep1','formStep2','formStep3'].forEach(id => document.getElementById(id).classList.remove('active'));
+  document.getElementById('formSuccess').classList.add('active');
+  [1,2,3].forEach(n => { document.getElementById('step'+n+'dot').classList.remove('active'); document.getElementById('step'+n+'dot').classList.add('done'); });
+}
+
+function sendWhatsapp() {
+  const name = document.getElementById('fullName').value;
+  const phone = document.getElementById('phone').value;
+  const city = document.getElementById('city').value;
+  const address = document.getElementById('address').value;
+  const notes = document.getElementById('notes').value;
+  const subtotal = cart.reduce((s,i) => s + i.price*i.qty, 0);
+  const total = subtotal + shippingCost;
+  let msg = `🛒 طلب جديد من Kaldi\n\n`;
+  msg += `👤 الاسم: ${name}\n📞 الجوال: ${phone}\n🏙️ المدينة: ${city}\n📍 العنوان: ${address}\n`;
+  if (notes) msg += `📝 ملاحظات: ${notes}\n`;
+  msg += `\n📦 المنتجات:\n`;
+  cart.forEach(i => msg += `• ${i.name} × ${i.qty} = ${i.price*i.qty} ريال\n`);
+  msg += `\n🚚 الشحن: ${shippingName} = ${shippingCost === 0 ? 'مجاني' : shippingCost+' ريال'}`;
+  msg += `\n💳 الدفع: ${paymentMethod}`;
+  msg += `\n💰 الإجمالي: ${total} ريال`;
+  window.open('https://wa.me/966512345678?text=' + encodeURIComponent(msg), '_blank');
+  cart = [];
+  updateCartUI();
+  setTimeout(closeCheckout, 1500);
+}
+
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2500);
 }
 </script>
 </body>
