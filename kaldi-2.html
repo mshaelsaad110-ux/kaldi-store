@@ -533,11 +533,24 @@ footer{background:var(--brown);color:#fff;text-align:center;padding:24px;font-si
             <div class="payment-name">تحويل بنكي</div>
           </div>
           <div class="payment-option" onclick="selectPayment(this,'مدى / بطاقة')">
-            <div class="payment-icon">💳</div>
+            <div class="payment-icon" style="display:flex;align-items:center;justify-content:center;">
+              <svg width="60" height="32" viewBox="0 0 120 50" xmlns="http://www.w3.org/2000/svg">
+                <rect x="0" y="0" width="55" height="24" fill="#4A90D9" rx="2"/>
+                <rect x="0" y="26" width="55" height="24" fill="#8DC63F" rx="2"/>
+                <text x="62" y="22" font-family="Arial" font-weight="bold" font-size="20" fill="#222">مدى</text>
+                <text x="62" y="44" font-family="Arial" font-size="14" fill="#555">mada</text>
+              </svg>
+            </div>
             <div class="payment-name">مدى / بطاقة</div>
           </div>
           <div class="payment-option" onclick="selectPayment(this,'Apple Pay')">
-            <div class="payment-icon">🍎</div>
+            <div class="payment-icon" style="display:flex;align-items:center;justify-content:center;">
+              <svg width="70" height="32" viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
+                <rect x="0" y="0" width="200" height="80" rx="10" fill="#000"/>
+                <text x="20" y="52" font-family="Arial" font-size="42" fill="white"></text>
+                <text x="50" y="52" font-family="Arial" font-weight="bold" font-size="28" fill="white"> Pay</text>
+              </svg>
+            </div>
             <div class="payment-name">Apple Pay</div>
           </div>
         </div>
